@@ -1,0 +1,283 @@
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+.header-container, .promo-container, .advantages-container, .map-container, .footer-container, .feedback {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1020px;
+    margin: 0 auto;
+}
+
+.header {
+    height: 80px;
+}
+
+.header-logo {
+    width: 160px;
+    height: 30px;
+    background-image: url(images/logo2.png);
+    background-size: cover;
+}
+
+.social-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 200px;
+    height: 80px;
+}
+
+.social-inst, .social-vk, .social-ls {
+    width: 30px;
+    height: 30px;
+}
+
+.promo {
+    height: 500px;
+    background-color: #42BAB8;
+    margin: 0;
+    padding: 5px;
+}
+
+.registr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 450px;
+    height: 450px;
+}
+
+.registr-title {
+    font-size: 4em;
+    margin: 0;
+    margin-bottom: 40px;
+}
+
+.registr-parag {
+    font-size: 1.2em;
+    margin: 0;
+    margin-bottom: 30px;
+}
+
+.button-registr {
+    align-self: flex-start;
+    background-color: white;
+    color: #42BAB8;
+    font-size: 1.1em;
+    border: 1px solid white;
+    border-radius: 50px;
+    padding: 15px;
+    cursor: pointer;
+}
+
+.button-registr:hover {
+    background-color: #235E5D;
+    border-color: #235E5D;
+    color: white;
+}
+
+.registr-img {
+    align-self: center;
+    width: 380px;
+    height: 505px;
+    margin: 0;
+}
+
+.advantages {
+    display: flex;
+    height: 450px;
+}
+
+.advan-card {
+    display: flex;
+    position: relative;
+    align-items: flex-end;
+    height: 350px;
+    width: 250px;
+    padding: 10px;
+    border: 3px solid #42BAB8;
+    border-radius: 30px;
+}
+
+.advan-card::before {
+    content: "";
+    position: absolute;
+    top: 60px;
+    left: 70px;
+    width: 128px;
+    height: 128px;
+}
+
+.disabled::before {
+    background-image: url(images/disabled.png);
+}
+
+.parking::before {
+    background-image: url(images/parking.png);
+}
+
+.pharmacy::before {
+    background-image: url(images/pharmacy.png);
+}
+
+.advatage-parag {
+    margin: 0;
+    margin-bottom: 55px;
+    text-align: center;
+    color: #42BAB8;
+}
+
+.map {
+    height: 615px;
+    background-color: #42BAB8;
+}
+
+.map-container {
+    flex-direction: column;
+}
+
+.map-title {
+    font-size: 4em;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.feedback {
+    flex-direction: column;
+    height: 400px;
+}
+
+.feedback-title {
+    color: #42BAB8;
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+.feed-text, .feed-email {
+    resize: none;
+    height: 100px;
+    width: 800px;
+    border: 2px solid #42BAB8;
+    border-radius: 10px;
+    font-size: 1.2em;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.feed-email {
+    height: 40px;
+}
+
+.button-feed {
+    margin-bottom: 30px;
+    background-color: #42BAB8;
+    color: white;
+    font-size: 1.1em;
+    text-decoration: none;
+    border: 1px solid #42BAB8;
+    border-radius: 50px;
+    padding: 15px 25px;
+    cursor: pointer;
+}
+
+.button-feed:hover {
+    background-color: #235E5D;
+    border-color: #235E5D;
+}
+
+.footer {
+    height: 100px;
+    background-color: #235E5D;
+}
+
+.github-dev {
+    color: white;
+    text-decoration: none;
+}
+
+.github-dev:hover {
+    color: gray;
+}
+
+.popup {
+    visibility: hidden;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.registr-body {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10px;
+}
+
+.registr-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+    background-color: white;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    background-color: transparent;
+    border: none;
+    background-image: url('images/close.png');
+    background-size: cover;
+    cursor: pointer;
+}
+
+.container-reg {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 90%;
+}
+
+.reg-item {
+    width: 60%;
+    height: 30px;
+    padding: 5px;
+    border: none;
+    border-bottom: 2px solid #42BAB8;
+    color: #42BAB8;
+}
+
+.reg-item::placeholder {
+    color: #42BAB8;
+}
+
+.btn-form {
+    margin-bottom: 30px;
+    background-color: #42BAB8;
+    color: white;
+    font-size: 1.1em;
+    text-decoration: none;
+    border: 1px solid #42BAB8;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
