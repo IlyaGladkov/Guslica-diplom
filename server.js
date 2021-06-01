@@ -22,7 +22,7 @@ app.post("/users", async ({ body }, res) => {
   let fields = ["firstname", "lastname", "patronymic", "email"];
   let fieldValues = fields.map((f) => body[f]);
 
-  if (fieldValues.every((v) => v)) {
+  if (fieldValues.every((v) => v != null && v !== "")) {
     let {
       rows: [upsertedUser],
     } = await client.query(
