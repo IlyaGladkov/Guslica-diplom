@@ -16,13 +16,15 @@ app.get("/users", async (req, res) => {
   res.json(rows);
 });
 
+let isEmpty = (v) => v == null && v === "";
+
 app.post("/users", async ({ body }, res) => {
   let client = await database.connect();
 
   let fields = ["firstname", "lastname", "patronymic", "email"];
   let fieldValues = fields.map((f) => body[f]);
 
-  if (fieldValues.every((v) => v != null && v !== "")) {
+  if (fieldValues.every((v) => !isEmpty(v))) {
     let {
       rows: [upsertedUser],
     } = await client.query(
@@ -41,7 +43,9 @@ app.post("/users", async ({ body }, res) => {
 
   res
     .status(400)
-    .send(`Missed required fields: ${fields.filter((f) => !body[f]).join()}`);
+    .send(
+      `Missed required fields: ${fields.filter((f) => isEmpty(body[f])).join()}`
+    );
 });
 
 app.use((err, req, res, next) => {
